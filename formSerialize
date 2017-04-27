@@ -1,0 +1,20 @@
+  title:   Serialize a FORM form into an object.
+content:
+$.fn.serializeObject = function () {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function (index,item) {
+      if(!(item.name in o)){
+        o[item.name] = item.value;
+      }
+    });
+    return o;
+}
+注：
+1、在Jquery后引入
+2、form标签需要加入name属性 如：
+
+<input id="title" name="title" type="text" />
+调用方法：
+
+var params = $(form).serializeObject();
