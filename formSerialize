@@ -1,4 +1,4 @@
-  title:   Serialize a FORM form into an object.
+title:   Serialize a FORM form into an object.
 content:
 $.fn.serializeObject = function () {
     var o = {};
